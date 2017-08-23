@@ -2,7 +2,7 @@ from centos7
 
 
 
-MAINTAINER Chenna Vemula <chennarao.py@gmail.com>
+MAINTAINER Prudhvi Godithi
 
 
 
@@ -22,7 +22,7 @@ RUN yum install -y wget \
 
 
 
-RUN mkdir /projectname        
+RUN mkdir /SpringbootCICD       
 
 
 
@@ -30,15 +30,15 @@ RUN mkdir /projectname
 
 
 
-ADD projectname-1.0.jar /projectname
+ADD docker-1.0.jar /SpringbootCICD
 
 
 
-WORKDIR /projectname
+WORKDIR /SpringbootCICD
 
 
 
-RUN chown -R 1001:1001 /projectname
+RUN chown -R 1001:1001 /SpringbootCICD
 
 
 
@@ -56,5 +56,5 @@ USER 1001
 
 
 
-CMD ["java","-jar","/projectname-1.0.jar"]
+CMD ["java","-jar","/SpringbootCICD-1.0.jar"]
 
